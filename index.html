@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Miqueias Greentech - Energia Solar</title>
+  <meta name="description" content="Energia solar com instalação, projeto e homologação. Kits fotovoltaicos em até 30x. Fale com a Miqueias Greentech e economize energia!" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: url("https://wallpapercave.com/wp/wp8084830.jpg")
+        no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  header {
+  background-image: url(''); /* URL da imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 6rem 1rem 4rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+    .section {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .features div {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #00ff88;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .features i {
+      color: #00ff88;
+      font-size: 1.3rem;
+    }
+    /* Botão WhatsApp fixo bolha */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe58;
+    }
+    .whatsapp-float i {
+      color: white;
+      font-size: 2rem;
+    }
+    .produtos {
+      max-width: 960px;
+      margin: 2rem auto 4rem;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      color: #000;
+    }
+    .produtos h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #111;
+    }
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .produto {
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+    .produto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+    .produto img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      object-fit: contain;
+      aspect-ratio: 4 / 3;
+    }
+    .produto h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .produto p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #444;
+      min-height: 38px;
+    }
+    .produto strong {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #000;
+    }
+    .whatsapp-button {
+      background-color: #25d366;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      margin-top: auto;
+      display: inline-block;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe58;
+    }
+    footer {
+      background-color: #111;
+      padding: 2rem 1rem;
+      color: #ccc;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header h2.highlight {
+        font-size: 1.3rem;
+      }
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header style="background-image: url(''); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 4rem 1rem; text-align: center; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+  <img src="criativo.jpg" alt="Logo Miqueias Greentech" style="max-width: 250px; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);" />
+</header>
+
+  <div class="section" data-aos="fade-up">
+    <div class="features">
+      <div><i class="fas fa-check-circle"></i> Projeto</div>
+      <div><i class="fas fa-check-circle"></i> Instalação</div>
+      <div><i class="fas fa-check-circle"></i> Homologação</div>
+    </div>
+  </div>
+
+  <div class="produtos" data-aos="fade-up">
+    <h2>Produtos em Destaque</h2>
+    <div class="produtos-grid">
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_GROWATT_X1_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747852224"
+          alt="Painel Solar Sunova 550W"
+        />
+        <h3>Kit Energia Solar Ongrid 400kWh</h3>
+        <p>2,92kWp 5 Painel Sunova 585W Inversor Growatt 3kW 220V 1MPPT.</p>
+        <p><strong>R$599,99</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Gostaria%20de%20comprar%20o%20Painel%20Solar%20550W%20Sunova"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_DEYE_ONGRID_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747850051"
+          alt="Bateria de Lítio Growatt"
+        />
+        <h3>Kit Energia Solar Ongrid 550kWh</h3>
+        <p>Mês 4,09kWp 7 Painel Sunova 585W Inversor Deye 3kW 220V 1MPPT.</p>
+        <p><strong>R$ 1.099</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Tenho%20interesse%20na%20Bateria%20de%20Litio%205,12kWh%20Growatt"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_SAJ_R5_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747851019"
+          alt="Inversor Solar Growatt 6kW"
+        />
+        <h3>Kit Energia Solar Ongrid 600kWh</h3>
+        <p>Mês 4,68kWp 8 Painel Sunova 585W Inversor SAJ 6kW 220V 1MPPT.</p>
+        <p><strong>R$ 1.269,99</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Gostaria%20do%20Inversor%20Solar%206kW%20Growatt"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_GROWATT_X2_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747851897"
+          alt="Cabos e Conectores para Energia Solar"
+        />
+        <h3>Kit Energia Solar 700kWh</h3>
+        <p>Mês 5,85kWp 10 painel Sunova 585W Black Inversor Growatt X2 7,5kW 220V 2MPPT (FASTTRACK).</p>
+        <p><strong>R$ 2.159,99</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Interesse%20em%20Cabos%20e%20Conectores%20Solar"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_SAJ_R5_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747851019"
+          alt="Regulador de Carga 40A MPPT"
+        />
+        <h3>Kit Energia Solar Ongrid 800kWh</h3>
+        <p>Mês 5,85kWp 10 Painel Sunova 585W Inversor SAJ 6kW 220V 1MPPT.</p>
+        <p><strong>R$ 2.750,00</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Gostaria%20do%20Regulador%20de%20Carga%2040A%20MPPT"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_GROWATT_X2_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747851897"
+          alt="Painel Solar Monocristalino 300W"
+        />
+        <h3>Kit Energia Solar 950kWh</h3>
+        <p>Mês 7,02kWp 12 Painel Sunova 585W Black Inversor Growatt X2 7,5kW 220V 2MPPT (FASTTRACK).</p>
+        <p><strong>R$ 3.215,90</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Tenho%20interesse%20no%20Painel%20Solar%20300W"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_SOFAR_PAINEL_SUNOVA_585W_PRETO_HD_5126dffa-bcbe-4642-9f52-6df5e4e31be6.png?v=1747845649"
+          alt="Kit de Cabos e Fixadores"
+        />
+        <h3>Kit Energia Solar Ongrid 1100kWh</h3>
+        <p>Mês 8,19kWp 14 Painel Sunova 585W Inversor Sofar 7,5kW 220V 2MPPT [FASTTRACK].</p>
+        <p><strong>R$ 3.599,99</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Quero%20o%20Kit%20de%20Cabos%20e%20Fixadores"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_SOFAR_PAINEL_SUNOVA_585W_PRETO_HD_5126dffa-bcbe-4642-9f52-6df5e4e31be6.png?v=1747845649"
+          alt="Inversor Híbrido Growatt 3000W"
+        />
+        <h3>Kit Energia Solar Ongrid 1500kWh</h3>
+        <p>Mês 7,60kWp 19 Painel Sunova 585W Inversor Sofar 7,5kW 220V 2MPPT [FASTTRACK].</p>
+        <p><strong>R$ 4.500,00</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Interesse%20no%20Inversor%20Hibrido%203000W%20Growatt"
+          target="_blank"
+          >Comprar no WhatsApp</a
+        >
+      </div>
+      <div class="produto" data-aos="zoom-in">
+        <img
+          loading="lazy"
+          src="https://www.meugerador.com.br/cdn/shop/files/KIT_ENERGIA_SOLAR_INVERSOR_GROWATT_MID_X1_PAINEL_SUNOVA_585W_PRETO_HD.png?v=1747851833"
+          alt="Inversor Híbrido Growatt 3000W"
+        />
+        <h3>Kit Energia Solar Ongrid 2000kWh</h3>
+        <p>Mês 15,21kWp 26 Painel Sunova 585W Inversor Growatt 15kW Trifásico 220V 4MPPT.</p>
+        <p><strong>R$ 6.099,99</strong></p>
+        <a
+          class="whatsapp-button"
+          href="https://wa.me/5551995093783?text=Interesse%20no%20Inversor%20Hibrido%203000W%20Growatt"
+          target="_blank"
+          >Comprar no WhatsApp</a>
+      </div>
+  </div>
+
+  <a
+    href="https://wa.me/5551995093783"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="WhatsApp"
+    title="Fale conosco no WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    © 2025 Miqueias Greentech - Todos os direitos reservados
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  </script>
+</body>
+</html>
